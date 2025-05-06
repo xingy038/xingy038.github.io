@@ -18,14 +18,39 @@ News
 
 <p style="line-height:1.5">
     <font size="3">
-        ∙ [2025.01] One paper is accepted to TPAMI 2025. <br>
-        ∙ [2024.08] One paper is accepted to PR 2024. <br>
-        ∙ [2023.08] One paper is accepted to TCSVT 2023.
+        [2025.05] One paper is accepted to ICML 2025. <br>
+        [2025.01] One paper is accepted to TPAMI 2025. <br>
+        [2024.08] One paper is accepted to PR 2024. <br>
+        [2023.08] One paper is accepted to TCSVT 2023.
     </font>
 </p>
 
 Publications
 ------
+<table style="border-collapse: collapse; border: none;">
+  <tr>
+    <td style="padding:5px; width:22%; vertical-align:middle; border: none;">
+      <img src="../images/uds.png" width="150" height="150" alt="UDS">
+    </td>
+    <td style="padding:5px; width:78%; vertical-align:middle; border: none;">
+      <h3 id="UDS">
+        <font size="3">
+          Rethinking Score Distilling Sampling for 3D Editing and Generation
+        </font>
+      </h3>
+      <p style="line-height:1.0;">
+        <font size="2">
+          <strong>Xingyu Miao</strong>, Haoran Duan, Yang Long, Jungong Han<br>
+          <i>Forty-Second International Conference on Machine Learning (<strong>ICML</strong>), 2025<br></i>
+          <a href="https://arxiv.org/abs/2505.01888">Paper</a> | 
+          <a href="https://github.com/xingy038/UDS">Code</a><br>
+        </font>
+      </p>
+    </td>
+  </tr>
+</table>
+<hr>
+
 <table style="border-collapse: collapse; border: none;">
   <tr>
     <td style="padding:5px; width:22%; vertical-align:middle; border: none;">
