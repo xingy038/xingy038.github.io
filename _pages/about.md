@@ -18,6 +18,9 @@ News
 
 <p style="line-height:1.5">
     <font size="3">
+        [2025.07] Two papers are accepted to BMVC 2025, congrating to Xueqi and Tianyu. <br>
+        [2025.06] One paper is accepted to ICCV 2025. <br>
+        [2025.06] One paper is accepted to MICCAI 2025, congrating to Minye. <br>
         [2025.05] One paper is accepted to ICML 2025. <br>
         [2025.01] One paper is accepted to TPAMI 2025. <br>
         [2024.08] One paper is accepted to PR 2024. <br>
@@ -25,8 +28,57 @@ News
     </font>
 </p>
 
-Publications
+Selected Publications
 ------
+<table style="border-collapse: collapse; border: none;">
+  <tr>
+    <td style="padding:5px; width:22%; vertical-align:middle; border: none;">
+      <img src="../images/M2StyleGS.png" width="150" height="150" alt="M2StyleGS">
+    </td>
+    <td style="padding:5px; width:78%; vertical-align:middle; border: none;">
+      <h3 id="M2StyleGS">
+        <font size="3">
+          M<sup>2</sup>StyleGS: Multi-Modality 3D Style Transfer with Gaussian Splatting
+        </font>
+      </h3>
+      <p style="line-height:1.0;">
+        <font size="2">
+          <strong>Xingyu Miao<sup>*</sup></strong>, Xueqi Qiu<sup>*</sup>, Haoran Duan, Yawen Huang, Xian Wu, Jingjing Deng, Yang Long <br>
+          <i>British Machine Vision Conference (<strong>BMVC</strong>), 2025 <span style="color: red;">(Oral Presentaion)</span><br></i>
+          <a href="">Paper</a> | 
+          <a href="">Code</a><br>
+        </font>
+      </p>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table style="border-collapse: collapse; border: none;">
+  <tr>
+    <td style="padding:5px; width:22%; vertical-align:middle; border: none;">
+      <img src="../images/2D-to-3D.png" width="150" height="150" alt="2D-to-3D">
+    </td>
+    <td style="padding:5px; width:78%; vertical-align:middle; border: none;">
+      <h3 id="2D-to-3D">
+        <font size="3">
+          Towards Scalable Spatial Intelligence via 2D-to-3D Data Lifting
+        </font>
+      </h3>
+      <p style="line-height:1.0;">
+        <font size="2">
+          <strong>Xingyu Miao</strong>, Haoran Duan, Quanhao Qian, Jiuniu Wang, Yang Long, Ling Shao, Deli Zhao, Ran Xu, Gongjie Zhang<br>
+          <i>International Conference on Computer Vision (<strong>ICCV</strong>), 2025 <span style="color: red;">(Highlight)</span><br></i>
+          <a href="https://arxiv.org/abs/2507.18678">Paper</a> | 
+          <a href="https://zhanggongjie.github.io/TowardsSSI-page/">Code</a><br>
+        </font>
+      </p>
+    </td>
+  </tr>
+</table>
+<hr>
+
+
 <table style="border-collapse: collapse; border: none;">
   <tr>
     <td style="padding:5px; width:22%; vertical-align:middle; border: none;">
@@ -41,7 +93,7 @@ Publications
       <p style="line-height:1.0;">
         <font size="2">
           <strong>Xingyu Miao</strong>, Haoran Duan, Yang Long, Jungong Han<br>
-          <i>Forty-Second International Conference on Machine Learning (<strong>ICML</strong>), 2025<br></i>
+          <i>International Conference on Machine Learning (<strong>ICML</strong>), 2025<br></i>
           <a href="https://arxiv.org/abs/2505.01888">Paper</a> | 
           <a href="https://github.com/xingy038/UDS">Code</a><br>
         </font>
