@@ -18,6 +18,7 @@ News
 
 <p style="line-height:1.5">
     <font size="3">
+        [2026.04] Two papers are accepted to Siggraph 2026. <br>
         [2025.07] Two papers are accepted to BMVC 2025, congrating to Xueqi and Tianyu. <br>
         [2025.06] One paper is accepted to ICCV 2025. <br>
         [2025.06] One paper is accepted to MICCAI 2025, congrating to Minye. <br>
@@ -33,6 +34,30 @@ Selected Publications
 <table style="border-collapse: collapse; border: none;">
   <tr>
     <td style="padding:5px; width:22%; vertical-align:middle; border: none;">
+      <img src="../images/TrajVG.png" width="150" height="150" alt="TrajVG">
+    </td>
+    <td style="padding:5px; width:78%; vertical-align:middle; border: none;">
+      <h3 id="TrajVG">
+        <font size="3">
+          TrajVG: 3D Trajectory-Coupled Visual Geometry Learning
+        </font>
+      </h3>
+      <p style="line-height:1.0;">
+        <font size="2">
+          <strong>Xingyu Miao</strong>, Weiguang Zhao, Tao Lu, Linning Xu, Mulin Yu, Yang Long, Jiangmiao Pang, Junting Dong <br>
+          <i>Special Interest Group for Computer GRAPHICS and Interactive Techniques (<strong>SIGGRAPH</strong>), 2026 <br></i>
+          <a href="https://arxiv.org/pdf/2602.04439">Paper</a> | 
+          <a href="https://xingy038.github.io/TrajVG/">Code</a><br>
+        </font>
+      </p>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table style="border-collapse: collapse; border: none;">
+  <tr>
+    <td style="padding:5px; width:22%; vertical-align:middle; border: none;">
       <img src="../images/M2StyleGS.png" width="150" height="150" alt="M2StyleGS">
     </td>
     <td style="padding:5px; width:78%; vertical-align:middle; border: none;">
@@ -45,8 +70,8 @@ Selected Publications
         <font size="2">
           <strong>Xingyu Miao<sup>*</sup></strong>, Xueqi Qiu<sup>*</sup>, Haoran Duan, Yawen Huang, Xian Wu, Jingjing Deng, Yang Long <br>
           <i>British Machine Vision Conference (<strong>BMVC</strong>), 2025 <span style="color: red;">(Oral Presentaion)</span><br></i>
-          <a href="">Paper</a> | 
-          <a href="">Code</a><br>
+          <a href="https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_133/paper.pdf">Paper</a> | 
+          <a href="https://nora202.github.io/MMStyleGS/">Code</a><br>
         </font>
       </p>
     </td>
