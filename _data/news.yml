@@ -1,28 +1,27 @@
 - date: '2026.09'
   datetime: '2026-09-25'
   kind: Technical Report
-  text: '<a href="https://internrobotics.github.io/InternW0-Delta/" target="_blank" rel="noopener noreferrer">InternW0-Δ</a> is out: a world action model connecting predictive dynamics and robot actions, with 20K+ hours of open pretraining data.'
+  text: Our technical report, <a href="https://internrobotics.github.io/InternW0-Delta/" target="_blank" rel="noopener noreferrer">InternW0-Δ</a>, is now available.
 - date: '2026.09'
   datetime: '2026-09-23'
   kind: Collaboration
-  text: 'New collaborative work with Xueqi Qiu and colleagues: <a href="https://arxiv.org/abs/2609.28222" target="_blank" rel="noopener noreferrer">From Alignment to Fusion in 3D Vision-Language</a>, bringing point-cloud, voxel, and multi-view
-    representations together.'
+  text: Our new preprint with Xueqi Qiu and colleagues, <a href="https://arxiv.org/abs/2609.28222" target="_blank" rel="noopener noreferrer">From Alignment to Fusion in 3D Vision-Language</a>, is now available.
 - date: '2026.07'
   datetime: 2026-07
   kind: SIGGRAPH 2026
-  text: <a href="https://xingy038.github.io/TrajVG/" target="_blank" rel="noopener noreferrer">TrajVG</a> at SIGGRAPH 2026. Our collaborative <a href="https://weiguangzhao.github.io/SynthVerse/" target="_blank" rel="noopener noreferrer">SynthVerse</a>
-    dataset is also part of this year’s conference.
+  text: <a href="https://xingy038.github.io/TrajVG/" target="_blank" rel="noopener noreferrer">TrajVG</a> and our collaborative work <a href="https://weiguangzhao.github.io/SynthVerse/" target="_blank" rel="noopener noreferrer">SynthVerse</a>
+    have been accepted to SIGGRAPH 2026.
 - date: '2026.06'
   datetime: 2026-06
   kind: Publication
-  text: <a href="https://durham-repository.worktribe.com/output/5717326" target="_blank" rel="noopener noreferrer">Dreamer XL</a> appears in IEEE Transactions on Circuits and Systems for Video Technology.
+  text: Our paper <a href="https://durham-repository.worktribe.com/output/5717326" target="_blank" rel="noopener noreferrer">Dreamer XL</a> has been accepted by IEEE TCSVT.
   date_basis: Online publication month
   date_source: https://durham-repository.worktribe.com/output/5717326
 - date: '2026.05'
   datetime: 2026-05
   kind: Collaborations
-  text: 'New journal collaborations: <a href="https://doi.org/10.1016/j.patcog.2026.114014" target="_blank" rel="noopener noreferrer">M3GStyler</a> and <a href="https://doi.org/10.1016/j.patcog.2026.113915" target="_blank" rel="noopener noreferrer">A2D2C</a>
-    appear in Pattern Recognition.'
+  text: Our collaborative papers <a href="https://doi.org/10.1016/j.patcog.2026.114014" target="_blank" rel="noopener noreferrer">M3GStyler</a> and <a href="https://doi.org/10.1016/j.patcog.2026.113915" target="_blank" rel="noopener noreferrer">A2D2C</a>
+    have been accepted by Pattern Recognition.
   date_basis: Online publication month
   date_source:
   - https://durham-repository.worktribe.com/output/5611921/m3gstyler-enhancing-consistency-across-multi-view-in-multi-modality-3d-gaussian-style-transfer
@@ -30,55 +29,56 @@
 - date: ~2026.04
   datetime: 2026-04
   kind: Collaboration
-  text: Our collaborative work <a href="https://doi.org/10.1109/TMM.2026.3685795" target="_blank" rel="noopener noreferrer">AdaGA-NeRF for Sparse-View Synthesis</a> appears in IEEE Transactions on Multimedia.
+  text: Our collaborative paper <a href="https://doi.org/10.1109/TMM.2026.3685795" target="_blank" rel="noopener noreferrer">AdaGA-NeRF for Sparse-View Synthesis</a> has been accepted by IEEE Transactions on Multimedia.
   date_basis: Approximate month inferred from DOI registration on 20 April 2026; online publication month not independently verified.
   date_source: https://api.crossref.org/works/10.1109%2Ftmm.2026.3685795
   approximate: true
 - date: '2026.02'
   datetime: '2026-02-02'
   kind: New preprint
-  text: <a href="https://arxiv.org/abs/2602.01661" target="_blank" rel="noopener noreferrer">From Frames to Sequences</a> explores temporally consistent human-centric depth, normals, and segmentation.
+  text: Our preprint, <a href="https://arxiv.org/abs/2602.01661" target="_blank" rel="noopener noreferrer">From Frames to Sequences</a>, is now available.
 - date: '2026.01'
   datetime: 2026-01
   kind: Publication
-  text: <a href="https://doi.org/10.1016/j.patcog.2026.113134" target="_blank" rel="noopener noreferrer">ConRF</a> appears in Pattern Recognition.
+  text: Our paper <a href="https://doi.org/10.1016/j.patcog.2026.113134" target="_blank" rel="noopener noreferrer">ConRF</a> has been accepted by Pattern Recognition.
   date_basis: Online publication month
   date_source: https://durham-repository.worktribe.com/output/5157027/conrf-zero-shot-stylization-of-3d-scenes-with-conditioned-radiation-fields
 - date: '2026.01'
   datetime: 2026-01
   kind: Collaboration · AAAI
-  text: 'Collaborative work with Minye Shao and colleagues: <a href="https://ojs.aaai.org/index.php/AAAI/article/view/37839" target="_blank" rel="noopener noreferrer">vMFCoOp</a>, on prompting biomedical vision-language models, at AAAI 2026.'
+  text: Our collaborative paper <a href="https://ojs.aaai.org/index.php/AAAI/article/view/37839" target="_blank" rel="noopener noreferrer">vMFCoOp</a> has been accepted to AAAI 2026. Congratulations to Minye and the team!
   date_basis: Conference month
   date_source: https://aaai.org/conference/aaai/aaai-26/
 - date: '2025.11'
   datetime: 2025-11
   kind: BMVC · Oral
-  text: <a href="https://nora202.github.io/MMStyleGS/" target="_blank" rel="noopener noreferrer">M²StyleGS</a> is an oral presentation at BMVC 2025. Our collaborative work on cross-subject EEG–vision decoding is also presented orally.
+  text: <a href="https://nora202.github.io/MMStyleGS/" target="_blank" rel="noopener noreferrer">M²StyleGS</a> has been accepted to BMVC 2025 for an oral presentation. Our collaborative work on cross-subject EEG–vision decoding has also been
+    selected for an oral presentation.
 - date: '2025.10'
   datetime: 2025-10
   kind: ICCV · Highlight
-  text: <a href="https://zhanggongjie.github.io/TowardsSSI-page/" target="_blank" rel="noopener noreferrer">Towards Scalable Spatial Intelligence via 2D-to-3D Data Lifting</a> is an ICCV 2025 Highlight.
+  text: Our paper <a href="https://zhanggongjie.github.io/TowardsSSI-page/" target="_blank" rel="noopener noreferrer">Towards Scalable Spatial Intelligence via 2D-to-3D Data Lifting</a> has been accepted to ICCV 2025 as a Highlight.
 - date: '2025.09'
   datetime: 2025-09
   kind: Collaboration · MICCAI
-  text: Our collaborative work <a href="https://github.com/VinyehShaw/TRACE" target="_blank" rel="noopener noreferrer">TRACE</a> at MICCAI 2025. Congratulations to the team.
+  text: Our collaborative paper <a href="https://github.com/VinyehShaw/TRACE" target="_blank" rel="noopener noreferrer">TRACE</a> has been accepted to MICCAI 2025. Congratulations to Minye and the team!
   date_basis: Conference month
   date_source: https://conferences.miccai.org/2025/
 - date: '2025.07'
   datetime: 2025-07
   kind: ICML
-  text: <a href="https://proceedings.mlr.press/v267/miao25a.html" target="_blank" rel="noopener noreferrer">Rethinking Score Distilling Sampling for 3D Editing and Generation</a> at ICML 2025.
+  text: Our paper <a href="https://proceedings.mlr.press/v267/miao25a.html" target="_blank" rel="noopener noreferrer">Rethinking Score Distilling Sampling for 3D Editing and Generation</a> has been accepted to ICML 2025.
   date_basis: Conference month
   date_source: https://icml.cc/Conferences/2025/Dates
 - date: '2025.03'
   datetime: 2025-03
   kind: Collaboration
-  text: Our collaborative work <a href="https://doi.org/10.1016/j.inffus.2025.103087" target="_blank" rel="noopener noreferrer">D2Fusion</a> appears in Information Fusion. Congratulations to the team.
+  text: Our collaborative paper <a href="https://doi.org/10.1016/j.inffus.2025.103087" target="_blank" rel="noopener noreferrer">D2Fusion</a> has been accepted by Information Fusion. Congratulations to Xueqi and the team!
   date_basis: Online publication month
   date_source: https://eprints.ncl.ac.uk/305133
 - date: '2025.01'
   datetime: 2025-01
   kind: Publication
-  text: <a href="https://arxiv.org/abs/2501.19084" target="_blank" rel="noopener noreferrer">Laser</a> appears in IEEE Transactions on Pattern Analysis and Machine Intelligence.
+  text: Our paper <a href="https://arxiv.org/abs/2501.19084" target="_blank" rel="noopener noreferrer">Laser</a> has been accepted by IEEE TPAMI.
   date_basis: Online publication month
   date_source: https://durham-repository.worktribe.com/output/3681375/laser-efficient-language-guided-segmentation-in-neural-radiance-fields
