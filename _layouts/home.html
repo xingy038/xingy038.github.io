@@ -35,7 +35,24 @@
   </header>
   {% endif %}
   <main id="main" class="{% if is_home %}reading-column{% else %}page-width{% endif %}">{{ content }}</main>
-  <footer class="site-footer {% if is_home %}reading-column{% else %}page-width{% endif %}"><p>© {{ site.data.profile.updated | date: '%Y' }} Xingyu Miao <span>·</span> <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p><p>Updated {{ site.data.profile.updated | date: '%B %Y' }}</p></footer>
+  <footer class="site-footer {% if is_home %}reading-column{% else %}page-width{% endif %}">
+    <p>© {{ site.data.profile.updated | date: '%Y' }} Xingyu Miao <span>·</span> <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p>
+    <p>Updated {{ site.data.profile.updated | date: '%B %Y' }}</p>
+    {% if is_home %}
+    <section class="visitor-record" id="visitors" aria-labelledby="visitors-title">
+      <div>
+        <h2 id="visitors-title">Visitors</h2>
+        <p>Visits by country since November 2026.</p>
+        <a href="https://info.flagcounter.com/p2n1">View visitor statistics</a>
+      </div>
+      {% if jekyll.environment == 'production' %}
+      <a class="visitor-map" href="https://info.flagcounter.com/p2n1">
+        <img src="https://s05.flagcounter.com/map/p2n1/size_s/txt_32434A/border_D4DDE4/pageviews_1/viewers_3/flags_0/" width="400" height="205" decoding="async" fetchpriority="low" alt="Visitor countries and total page views on Flag Counter">
+      </a>
+      {% endif %}
+    </section>
+    {% endif %}
+  </footer>
   <dialog class="citation-dialog" id="citation-dialog" aria-labelledby="citation-title"><div class="dialog-heading"><h2 id="citation-title">BibTeX</h2><button type="button" class="dialog-close" id="close-citation" aria-label="Close citation dialog">×</button></div><pre id="citation-text" tabindex="0"></pre><div class="dialog-footer"><p id="copy-status" role="status" aria-live="polite"></p><button class="action-button" type="button" id="copy-citation">Copy BibTeX</button></div></dialog>
   <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-title"><div class="dialog-heading"><div><h2 id="figure-title"></h2><p id="figure-caption"></p></div><button type="button" class="dialog-close" id="close-figure" aria-label="Close figure">×</button></div><div class="figure-viewport" id="figure-viewport"><img id="full-figure" alt=""></div><div class="dialog-footer"><button type="button" class="subtle-button" id="figure-zoom" aria-pressed="false">Original size</button><a id="figure-paper" target="_blank" rel="noopener noreferrer">Open paper</a></div></dialog>
 </body>
