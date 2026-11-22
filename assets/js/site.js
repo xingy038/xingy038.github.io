@@ -8,7 +8,7 @@
   const empty = document.querySelector('#empty-state');
   let activeFilter = 'all';
   let visiblePapers = [];
-  const searchIndex = new Map(papers.map((paper) => [paper, paper.querySelector('.publication-content').textContent.toLowerCase()]));
+  const searchIndex = new Map(papers.map((paper) => [paper, paper.textContent.toLowerCase()]));
 
   const updatePapers = () => {
     const query = search?.value.trim().toLowerCase() || '';
@@ -20,7 +20,6 @@
     });
     filters.forEach((button) => {
       const active = button.dataset.filter === activeFilter;
-      button.classList.toggle('is-active', active);
       button.setAttribute('aria-pressed', String(active));
     });
     if (count) count.textContent = `${visiblePapers.length} ${visiblePapers.length === 1 ? 'paper' : 'papers'}`;
@@ -53,7 +52,7 @@
       const expanded = newsToggle.getAttribute('aria-expanded') !== 'true';
       newsToggle.setAttribute('aria-expanded', String(expanded));
       extraNews.forEach((item) => { item.hidden = !expanded; });
-      newsToggle.innerHTML = expanded ? 'Less news <span aria-hidden="true">↑</span>' : 'More news <span aria-hidden="true">↓</span>';
+      newsToggle.textContent = expanded ? 'Less news' : 'More news';
     });
   }
 
@@ -122,7 +121,7 @@
     });
   }
 
-  const navigation = [...document.querySelectorAll('.site-header nav a[href*="#"]')];
+  const navigation = [...document.querySelectorAll('.section-nav a[href*="#"]')];
   if ('IntersectionObserver' in window && navigation.length) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
