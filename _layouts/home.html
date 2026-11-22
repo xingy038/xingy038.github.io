@@ -23,16 +23,19 @@
   <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ asset_version }}" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":{{ site.data.profile.name | jsonify }},"url":{{ '/' | absolute_url | jsonify }},"description":"Researcher in embodied AI, world models, and robot learning.","image":{{ '/assets/media/portrait.webp' | absolute_url | jsonify }},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Durham University"},{"@type":"CollegeOrUniversity","name":"Ningxia University"}],"sameAs":[{{ site.data.profile.scholar | jsonify }},{{ site.data.profile.github | jsonify }}],"knowsAbout":["Embodied artificial intelligence","World models","Robot learning","3D computer vision"]}</script>
 </head>
-<body>
+{% if page.url == '/' %}{% assign is_home = true %}{% endif %}
+<body{% if is_home %} class="home-grid"{% endif %}>
   <a class="skip-link" href="#main">Skip to content</a>
-  {% unless page.url == '/' %}
+  {% if is_home %}
+    {% include author.html %}
+  {% else %}
   <header class="site-header page-width">
     <a class="site-name" href="{{ '/' | relative_url }}">{{ site.data.profile.name }}</a>
     {% include section-nav.html %}
   </header>
-  {% endunless %}
-  <main id="main" class="page-width">{{ content }}</main>
-  <footer class="site-footer page-width"><p>© {{ site.data.profile.updated | date: '%Y' }} Xingyu Miao <span>·</span> <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p><p>Updated {{ site.data.profile.updated | date: '%B %Y' }}</p></footer>
+  {% endif %}
+  <main id="main" class="{% if is_home %}reading-column{% else %}page-width{% endif %}">{{ content }}</main>
+  <footer class="site-footer {% if is_home %}reading-column{% else %}page-width{% endif %}"><p>© {{ site.data.profile.updated | date: '%Y' }} Xingyu Miao <span>·</span> <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p><p>Updated {{ site.data.profile.updated | date: '%B %Y' }}</p></footer>
   <dialog class="citation-dialog" id="citation-dialog" aria-labelledby="citation-title"><div class="dialog-heading"><h2 id="citation-title">BibTeX</h2><button type="button" class="dialog-close" id="close-citation" aria-label="Close citation dialog">×</button></div><pre id="citation-text" tabindex="0"></pre><div class="dialog-footer"><p id="copy-status" role="status" aria-live="polite"></p><button class="action-button" type="button" id="copy-citation">Copy BibTeX</button></div></dialog>
   <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-title"><div class="dialog-heading"><div><h2 id="figure-title"></h2><p id="figure-caption"></p></div><button type="button" class="dialog-close" id="close-figure" aria-label="Close figure">×</button></div><div class="figure-viewport" id="figure-viewport"><img id="full-figure" alt=""></div><div class="dialog-footer"><button type="button" class="subtle-button" id="figure-zoom" aria-pressed="false">Original size</button><a id="figure-paper" target="_blank" rel="noopener noreferrer">Open paper</a></div></dialog>
 </body>

@@ -6,28 +6,16 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<section class="profile" id="about" aria-labelledby="profile-name">
-  <div class="profile-identity">
-    <h1 id="profile-name">{{ site.data.profile.name }}</h1>
-    <p class="profile-subtitle">{{ site.data.profile.role }}</p>
-  </div>
-  {% include section-nav.html %}
-  <img class="profile-photo" src="{{ '/assets/media/portrait.webp' | relative_url }}" width="720" height="751" alt="Xingyu Miao">
-  <div class="profile-text">
-    <div class="biography" id="research">
-      <p>I am a researcher working on <strong>embodied intelligence</strong>, with a focus on <strong>world models and robot learning</strong>. I’m interested in how agents can learn the dynamics of the physical world and use that understanding to act.</p>
-      <p>I received my Ph.D. in Computer Science from <a href="https://www.durham.ac.uk/" target="_blank" rel="noopener noreferrer">Durham University</a>, advised by <a href="{{ site.data.profile.advisor_url }}" target="_blank" rel="noopener noreferrer">Prof. Yang Long</a>. My earlier work on depth estimation, dynamic 3D reconstruction, and generative modeling forms the foundation for my current research.</p>
-    </div>
-    <div class="profile-links" id="contact">
-      <a href="mailto:{{ site.data.profile.email }}">Email</a>
-      <a href="{{ site.data.profile.scholar }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-      <a href="{{ site.data.profile.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
+<section class="about-section" id="about" aria-labelledby="about-title">
+  <h2 class="ruled-heading" id="about-title">About</h2>
+  <div class="biography" id="research">
+    <p>I am a researcher working on <strong>embodied intelligence</strong>, with a focus on <strong>world models and robot learning</strong>. I’m interested in how agents can learn the dynamics of the physical world and use that understanding to act.</p>
+    <p>I received my Ph.D. in Computer Science from <a href="https://www.durham.ac.uk/" target="_blank" rel="noopener noreferrer">Durham University</a>, advised by <a href="{{ site.data.profile.advisor_url }}" target="_blank" rel="noopener noreferrer">Prof. Yang Long</a>. My earlier work on depth estimation, dynamic 3D reconstruction, and generative modeling forms the foundation for my current research.</p>
   </div>
 </section>
 
 <section class="news-section" id="news" aria-labelledby="news-title">
-  <div class="section-heading"><h2 id="news-title">News</h2></div>
+  <h2 class="ruled-heading" id="news-title">News</h2>
   <div class="news-list" id="news-list">
     {% for item in site.data.news %}
     <article class="news-item{% if forloop.index > 4 %} news-extra{% endif %}">
@@ -40,9 +28,12 @@ redirect_from:
 </section>
 
 <section class="publications-section" id="publications" aria-labelledby="publications-title">
-  <div class="section-heading publication-heading">
-    <h2 id="publications-title">Publications</h2>
-    <p>First-author papers <span aria-hidden="true">·</span> * Equal contribution</p>
+  <div class="publication-heading">
+    <h2 class="ruled-heading" id="publications-title">Publications</h2>
+    <div class="collection-meta">
+      <p>First-author papers <span aria-hidden="true">·</span> * Equal contribution</p>
+      <p id="results-count" role="status" aria-live="polite"></p>
+    </div>
   </div>
   <div class="publication-tools" hidden>
     <div class="paper-filters" role="group" aria-label="Filter publications">
@@ -53,9 +44,26 @@ redirect_from:
     </div>
     <label class="paper-search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="sr-only">Search first-author publications</span><input id="paper-search" type="search" placeholder="Search publications" autocomplete="off"></label>
   </div>
-  <div class="publication-notes"><p>Click a figure to view it in full size.</p><p id="results-count" role="status" aria-live="polite"></p></div>
-  <div class="publication-list">{% for paper in site.data.publications %}{% include publication.html paper=paper %}{% endfor %}</div>
+  {% assign years = site.data.publications | group_by: 'year' %}
+  {% for year in years %}
+  <section class="year-group" aria-labelledby="year-{{ year.name }}">
+    <h3 class="year-heading" id="year-{{ year.name }}">{{ year.name }}</h3>
+    {% for paper in year.items %}{% include publication.html paper=paper %}{% endfor %}
+  </section>
+  {% endfor %}
   <div class="empty-state" id="empty-state" hidden><p>No publications match this search.</p><button class="subtle-button" type="button" id="clear-search">Clear filters</button></div>
 </section>
 
-<section class="education-section" id="education" aria-labelledby="education-title"><div class="section-heading"><h2 id="education-title">Education</h2></div><dl class="education-list"><div><dt>Ph.D. in Computer Science</dt><dd>Durham University<br><span>Advisor: <a href="{{ site.data.profile.advisor_url }}" target="_blank" rel="noopener noreferrer">Prof. Yang Long</a></span></dd></div><div><dt>M.Eng. in Information Engineering</dt><dd>Ningxia University</dd></div></dl></section>
+<section class="education-section" id="education" aria-labelledby="education-title">
+  <h2 class="ruled-heading" id="education-title">Education</h2>
+  <dl class="education-list">
+    <div>
+      <dt>Ph.D. in Computer Science</dt>
+      <dd>Durham University<br><span>Advisor: <a href="{{ site.data.profile.advisor_url }}" target="_blank" rel="noopener noreferrer">Prof. Yang Long</a></span></dd>
+    </div>
+    <div>
+      <dt>M.Eng. in Information Engineering</dt>
+      <dd>Ningxia University</dd>
+    </div>
+  </dl>
+</section>

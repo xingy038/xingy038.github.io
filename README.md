@@ -51,4 +51,4 @@ python3 scripts/extract_figures.py --pdf-directory /path/to/pdfs
 
 PDFs and extraction dependencies are not needed for building or serving the site. The large source PDFs are not committed.
 
-The portrait is retained from the author's original site. DM Sans is self-hosted from [Google Fonts](https://github.com/google/fonts) under its included SIL Open Font License. See `LICENSE` for retained upstream attribution.
+The portrait is retained from the author's original site. DM Sans and Hedvig Letters Serif are self-hosted from [Google Fonts](https://github.com/google/fonts) with their SIL Open Font Licenses in `assets/fonts/`. See `LICENSE` for retained upstream attribution.

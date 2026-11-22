@@ -2,13 +2,14 @@
   'use strict';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const papers = [...document.querySelectorAll('.publication')];
+  const yearGroups = document.querySelectorAll('.year-group');
   const filters = [...document.querySelectorAll('[data-filter]')];
   const search = document.querySelector('#paper-search');
   const count = document.querySelector('#results-count');
   const empty = document.querySelector('#empty-state');
   let activeFilter = 'all';
   let visiblePapers = [];
-  const searchIndex = new Map(papers.map((paper) => [paper, paper.textContent.toLowerCase()]));
+  const searchIndex = new Map(papers.map((paper) => [paper, `${paper.dataset.year} ${paper.textContent}`.toLowerCase()]));
 
   const updatePapers = () => {
     const query = search?.value.trim().toLowerCase() || '';
@@ -21,6 +22,9 @@
     filters.forEach((button) => {
       const active = button.dataset.filter === activeFilter;
       button.setAttribute('aria-pressed', String(active));
+    });
+    yearGroups.forEach((group) => {
+      group.hidden = !group.querySelector('.publication:not([hidden])');
     });
     if (count) count.textContent = `${visiblePapers.length} ${visiblePapers.length === 1 ? 'paper' : 'papers'}`;
     if (empty) empty.hidden = visiblePapers.length !== 0;
@@ -121,17 +125,26 @@
     });
   }
 
-  const navigation = [...document.querySelectorAll('.section-nav a[href*="#"]')];
-  if ('IntersectionObserver' in window && navigation.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        navigation.forEach((link) => {
-          if (link.hash === `#${entry.target.id}`) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
-        });
-      });
-    }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
-    navigation.forEach((link) => { const section = document.getElementById(link.hash.slice(1)); if (section) observer.observe(section); });
+  const sections = [...document.querySelectorAll('.section-nav a[href*="#"]')]
+    .map((link) => ({ link, section: document.getElementById(link.hash.slice(1)) }))
+    .filter((entry) => entry.section);
+  if (sections.length) {
+    let currentLink;
+    const syncNavigation = () => {
+      const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      const marker = Math.min(120, window.innerHeight * 0.16);
+      let current = sections[0];
+      for (const entry of sections) {
+        if (atBottom || entry.section.getBoundingClientRect().top <= marker) current = entry;
+      }
+      if (current.link === currentLink) return;
+      currentLink?.removeAttribute('aria-current');
+      current.link.setAttribute('aria-current', 'location');
+      currentLink = current.link;
+    };
+    window.addEventListener('scroll', syncNavigation, { passive: true });
+    window.addEventListener('resize', syncNavigation);
+    if ('ResizeObserver' in window) new ResizeObserver(syncNavigation).observe(document.querySelector('main'));
+    syncNavigation();
   }
 })();

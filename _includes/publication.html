@@ -1,16 +1,15 @@
 {% assign p = include.paper %}
-<article class="publication{% unless p.image %} publication-text-only{% endunless %}" id="paper-{{ p.id }}" data-topic="{{ p.topic }}">
+<article class="publication{% unless p.image %} publication-text-only{% endunless %}" id="paper-{{ p.id }}" data-topic="{{ p.topic }}" data-year="{{ p.year }}">
   <header class="paper-heading">
     <p class="paper-meta">
       <span class="paper-venue">{{ p.venue }}</span>
-      <span>{{ p.year }}</span>
       {% if p.award %}<span class="paper-award">{{ p.award }}</span>{% endif %}
     </p>
-    <h3><a href="{{ p.paper | default: p.scholar }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a></h3>
+    <h4><a href="{{ p.paper | default: p.scholar }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a></h4>
   </header>
   {% if p.image %}
   <figure class="paper-figure">
-    <a class="figure-link" href="{{ p.image | relative_url }}" data-figure="{{ p.id }}" data-title="{{ p.short | escape }}" data-caption="{{ p.figure_label | default: 'Figure from the paper' | escape }}" data-paper="{{ p.paper | default: p.scholar }}" aria-label="Enlarge {{ p.figure_label | default: 'figure' | escape }} from {{ p.short | escape }}">
+    <a class="figure-link" href="{{ p.image | relative_url }}" data-figure="{{ p.id }}" data-title="{{ p.short | escape }}" data-caption="{{ p.figure_label | default: 'Figure from the paper' | escape }}" data-paper="{{ p.paper | default: p.scholar }}" aria-label="Enlarge {{ p.figure_label | default: 'figure' | escape }} from {{ p.short | escape }}" title="View full-size figure">
       <img src="{{ p.image | relative_url }}" width="{{ p.image_width }}" height="{{ p.image_height }}" alt="{{ p.image_alt | default: p.title | escape }}" loading="lazy">
     </a>
   </figure>
