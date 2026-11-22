@@ -105,11 +105,13 @@ for paper in publications:
     if label in seen:
         errors.append(f'Duplicate publication id: {label}')
     seen.add(label)
-    if not paper.get('first_author') or not paper.get('authors', '').startswith('Xingyu Miao'):
-        errors.append(f'{label}: violates first-author-only publication scope')
+    authors = paper.get('authors', '')
+    if 'Xingyu Miao' not in authors or paper.get('first_author') is not authors.startswith('Xingyu Miao'):
+        errors.append(f'{label}: author list and first-author attribution disagree')
     if not re.fullmatch(r'\d{4}', str(paper.get('year', ''))):
         errors.append(f'{label}: invalid publication year')
-    if 'scholar.google.com/citations?' not in paper.get('scholar', ''):
+    source_record = paper.get('scholar') or paper.get('paper', '')
+    if not source_record.startswith(('https://scholar.google.com/citations?', 'https://arxiv.org/abs/')):
         errors.append(f'{label}: missing source record')
     if paper.get('status') == 'Preprint' and paper.get('venue') != 'arXiv':
         errors.append(f'{label}: preprint incorrectly presented as a published venue')
@@ -137,5 +139,5 @@ for path in ('Gemfile', 'Gemfile.lock', 'README.md', 'scripts/check_site.py', 'i
 if errors:
     print('\n'.join('ERROR: ' + error for error in errors))
     sys.exit(1)
-print(f'Passed: {len(pages)} HTML pages, {len(publications)} first-author publications, '
+print(f'Passed: {len(pages)} HTML pages, {len(publications)} publications, '
       'local assets, anchors, metadata, source records, and downloadable citations.')

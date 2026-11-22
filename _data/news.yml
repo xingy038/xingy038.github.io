@@ -1,3 +1,7 @@
+- date: '2026.11'
+  datetime: '2026-11-17'
+  kind: Technical Report
+  text: Our technical report, <a href="https://weiguangzhao.github.io/GameRealm/" target="_blank" rel="noopener noreferrer">GameRealm</a>, is now available.
 - date: '2026.09'
   datetime: '2026-09-25'
   kind: Technical Report

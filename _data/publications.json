@@ -1,5 +1,39 @@
 [
   {
+    "id": "gamerealm",
+    "short": "GameRealm",
+    "title": "GameRealm: Grounding Visual Learning in Interactive Games",
+    "authors": "Weiguang Zhao, Yifan Wang, Ni Yang, Yating Wang, Xingyu Miao, Yankai Jiang, Mulin Yu, Tao Lu, Haoyu Guo, Junting Dong, Weinan Zhang, Chunhua Shen",
+    "venue": "Technical Report",
+    "year": "2026",
+    "status": "Technical Report",
+    "source": "Technical report and official project page, verified 2026-11-22",
+    "first_author": false,
+    "topic": "embodied",
+    "paper": "https://arxiv.org/abs/2611.23140",
+    "project": "https://weiguangzhao.github.io/GameRealm/",
+    "code": "https://github.com/weiguangzhao/GameRealm",
+    "dataset": "https://huggingface.co/datasets/InternRobotics/GameRealm",
+    "description": "A dataset of over 120 million gameplay frames for training interactive world models and learning 3D geometry.",
+    "bibtex": "@techreport{zhao2026gamerealm,\n  title = {GameRealm: Grounding Visual Learning in Interactive Games},\n  author = {Weiguang Zhao and Yifan Wang and Ni Yang and Yating Wang and Xingyu Miao and Yankai Jiang and Mulin Yu and Tao Lu and Haoyu Guo and Junting Dong and Weinan Zhang and Chunhua Shen},\n  institution = {Shanghai Artificial Intelligence Laboratory},\n  year = {2026},\n  url = {https://arxiv.org/abs/2611.23140}\n}\n",
+    "image": "/assets/media/gamerealm.webp",
+    "image_width": 1801,
+    "image_height": 1014,
+    "figure_label": "Figure 1. GameRealm overview",
+    "image_alt": "Gameplay scenes illustrating single-view, multi-view, and panoramic world modeling, 3D reconstruction, and point tracking.",
+    "figure_source": {
+      "pdf": "https://arxiv.org/pdf/2611.23140v1",
+      "page": 2,
+      "bounds": [
+        62,
+        74,
+        529,
+        337
+      ],
+      "label": "Figure 1"
+    }
+  },
+  {
     "authors": "Xingyu Miao, Zizun Li, Baole Fang, Kaiwen Song, Tenghui Wang, et al.",
     "venue": "Technical Report",
     "year": "2026",

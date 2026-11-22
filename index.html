@@ -31,7 +31,7 @@ redirect_from:
   <div class="publication-heading">
     <h2 class="ruled-heading" id="publications-title">Publications</h2>
     <div class="collection-meta">
-      <p>First-author papers <span aria-hidden="true">·</span> * Equal contribution</p>
+      <p>First-author papers and selected collaborations <span aria-hidden="true">·</span> * Equal contribution</p>
       <p id="results-count" role="status" aria-live="polite"></p>
     </div>
   </div>
@@ -42,7 +42,7 @@ redirect_from:
       <button class="filter-button" type="button" data-filter="perception" aria-pressed="false">3D Perception</button>
       <button class="filter-button" type="button" data-filter="generation" aria-pressed="false">Generation</button>
     </div>
-    <label class="paper-search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="sr-only">Search first-author publications</span><input id="paper-search" type="search" placeholder="Search publications" autocomplete="off"></label>
+    <label class="paper-search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="sr-only">Search publications</span><input id="paper-search" type="search" placeholder="Search publications" autocomplete="off"></label>
   </div>
   {% assign years = site.data.publications | group_by: 'year' %}
   {% for year in years %}

@@ -3,6 +3,7 @@
   <header class="paper-heading">
     <p class="paper-meta">
       <span class="paper-venue">{{ p.venue }}</span>
+      {% if p.first_author == false %}<span>Collaboration</span>{% endif %}
       {% if p.award %}<span class="paper-award">{{ p.award }}</span>{% endif %}
     </p>
     <h4><a href="{{ p.paper | default: p.scholar }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a></h4>
@@ -21,6 +22,7 @@
       {% if p.paper %}<a href="{{ p.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}
       {% if p.project %}<a href="{{ p.project }}" target="_blank" rel="noopener noreferrer">Project</a>{% endif %}
       {% if p.code %}<a href="{{ p.code }}" target="_blank" rel="noopener noreferrer">Code</a>{% endif %}
+      {% if p.dataset %}<a href="{{ p.dataset }}" target="_blank" rel="noopener noreferrer">Dataset</a>{% endif %}
       {% if p.models %}<a href="{{ p.models }}" target="_blank" rel="noopener noreferrer">Models</a>{% endif %}
       {% if p.bibtex %}
       <a class="citation-link" href="{{ '/assets/citations/' | append: p.id | append: '.bib' | relative_url }}" data-citation="citation-{{ p.id }}">BibTeX</a>

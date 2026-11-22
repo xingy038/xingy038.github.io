@@ -1,10 +1,7 @@
 <header class="author-column" aria-labelledby="profile-name">
   <div class="author-profile">
     <img class="profile-photo" src="{{ '/assets/media/portrait.webp' | relative_url }}" width="720" height="751" alt="Xingyu Miao">
-    <div class="profile-identity">
-      <h1 id="profile-name">{{ site.data.profile.name }}</h1>
-      <p class="profile-subtitle">{{ site.data.profile.role }}</p>
-    </div>
+    <h1 class="profile-identity" id="profile-name">{{ site.data.profile.name }}</h1>
     <div class="profile-links" id="contact">
       <a href="mailto:{{ site.data.profile.email }}">Email</a>
       <a href="{{ site.data.profile.scholar }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
